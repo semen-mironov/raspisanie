@@ -42,7 +42,7 @@
   }
 
   .masthead h1{
-    font-family:'Fraunces', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:700;
     font-size: clamp(2.4rem, 6vw, 3.6rem);
     margin:0;
@@ -52,7 +52,7 @@
   }
 
   .masthead .tag{
-    font-family:'Fraunces', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-weight: 500;
     color: var(--ink-soft);
@@ -76,7 +76,7 @@
   }
 
   .teacher .name{
-    font-family:'Fraunces', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:600;
     color: var(--forest-deep);
     font-size: 1.02rem;
@@ -101,7 +101,7 @@
   thead th{
     background: var(--forest-deep);
     color: #f2f0e6;
-    font-family:'Fraunces', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     font-size: 1.05rem;
     padding: 14px 6px;
@@ -120,7 +120,7 @@
   tbody th{
     text-align:left;
     padding: 18px 8px 18px 22px;
-    font-family:'Fraunces', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     font-size: 1.15rem;
     color: var(--forest-deep);

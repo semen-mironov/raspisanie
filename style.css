@@ -32,13 +32,15 @@
 
   .masthead{
     display:flex;
-    align-items:flex-end;
+    /* align-items:flex-end; */
     justify-content:space-between;
     gap: 24px;
     border-bottom: 3px solid var(--forest-deep);
     padding-bottom: 18px;
     margin-bottom: 28px;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
   }
 
   .masthead h1{
@@ -221,6 +223,15 @@
     .subj{ font-size:0.82rem; padding:6px 3px; }
     .masthead{ align-items:flex-start; }
     .teacher{ text-align:left; max-width:none; }
+    .dayofweek {
+      display: none;
+    }
+    .empty {
+      display: none;
+    }
+    .last {
+      display: none;
+    }
   }
 
   .btn {

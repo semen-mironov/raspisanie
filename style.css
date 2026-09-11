@@ -32,15 +32,13 @@
 
   .masthead{
     display:flex;
-    /* align-items:flex-end; */
+    align-items:flex-end;
     justify-content:space-between;
     gap: 24px;
     border-bottom: 3px solid var(--forest-deep);
     padding-bottom: 18px;
     margin-bottom: 28px;
     flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
   }
 
   .masthead h1{
@@ -223,13 +221,14 @@
     .subj{ font-size:0.82rem; padding:6px 3px; }
     .masthead{ align-items:flex-start; }
     .teacher{ text-align:left; max-width:none; }
+    .last {
+      display: none;
+    }
     .dayofweek {
       display: none;
     }
+
     .empty {
-      display: none;
-    }
-    .last {
       display: none;
     }
   }
@@ -271,4 +270,59 @@
     font-size: 20px;
     text-decoration: none;
     color: #000;
+  }
+
+  /* ---- Dark theme ---- */
+  html[data-theme="dark"]{
+    --paper:      #171b18;
+    --ink:        #e7ebe4;
+    --ink-soft:   #a3ada0;
+    --line:       #3a4339;
+    --forest:     #4a7359;
+    --forest-deep:#0f1a13;
+    --mustard:    #d99b3e;
+    --card:       #1e241f;
+  }
+
+  html[data-theme="dark"] thead th{
+    color: #eef0ea;
+  }
+
+  html[data-theme="dark"] tbody th{
+    background: #202620;
+    color: var(--ink);
+  }
+
+  html[data-theme="dark"] tbody tr:nth-child(odd) td:not(.empty){
+    background: #1a201b;
+  }
+
+  html[data-theme="dark"] td.empty{
+    background: repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.04) 8px,
+      rgba(255,255,255,0.04) 9px
+    );
+  }
+
+  html[data-theme="dark"] .subj{
+    color: var(--ink);
+  }
+
+  html[data-theme="dark"] .lesson-card{
+    background-color: #202620;
+    border-color: var(--line);
+  }
+
+  html[data-theme="dark"] .lesson-card a{
+    color: var(--ink);
+  }
+
+  html[data-theme="dark"] .masthead h1 {
+    color: #fff;
+  }
+  html[data-theme="dark"] hr {
+    color: #fff;
   }

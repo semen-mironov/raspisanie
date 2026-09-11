@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root{
+    --paper:      #eef0ea;
+    --ink:        #1f2a24;
+    --ink-soft:   #5a675e;
+    --line:       #cdd3c6;
+    --forest:     #35543f;
+    --forest-deep:#233a2a;
+    --mustard:    #c98a2c;
+    --card:       #ffffff;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+  }
+
+  body{
+    padding: 40px 20px 70px;
+  }
+
+  .sheet{
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .masthead{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap: 24px;
+    border-bottom: 3px solid var(--forest-deep);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .masthead h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    margin:0;
+    letter-spacing: -0.01em;
+    color: var(--forest-deep);
+    line-height: 0.95;
+  }
+
+  .masthead .tag{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    margin-top: 6px;
+  }
+
+  .teacher{
+    text-align:right;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    max-width: 320px;
+  }
+
+  .teacher .label{
+    display:block;
+    font-size: 0.72rem;
+    text-transform: none;
+    color: var(--ink-soft);
+    margin-bottom: 2px;
+  }
+
+  .teacher .name{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    color: var(--forest-deep);
+    font-size: 1.02rem;
+  }
+
+  /* ---- Table ---- */
+
+  .grid-wrap{
+    background: var(--card);
+    border-radius: 4px;
+    box-shadow: 0 1px 0 var(--line);
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  thead th{
+    background: var(--forest-deep);
+    color: #f2f0e6;
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 6px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.12);
+  }
+
+  thead th:first-child{
+    text-align:left;
+    padding-left: 22px;
+    width: 96px;
+  }
+
+  thead th:last-child{ border-right:none; }
+
+  tbody th{
+    text-align:left;
+    padding: 18px 8px 18px 22px;
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--forest-deep);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+    background: #f6f7f2;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td{
+    border-bottom: none;
+  }
+
+  td{
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 8px;
+    vertical-align: middle;
+    text-align:center;
+  }
+
+  td:last-child{ border-right:none; }
+
+  td.empty{
+    background: repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 8px,
+      rgba(90,103,94,0.06) 8px,
+      rgba(90,103,94,0.06) 9px
+    );
+  }
+
+  /* subject link "pill" */
+  .subj{
+    display:block;
+    text-decoration:none;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.98rem;
+    padding: 10px 6px;
+    border-radius: 3px;
+    transition: background 0.15s ease, color 0.15s ease;
+    line-height: 1.25;
+  }
+
+  .subj:hover{
+    background: var(--forest);
+    color: #fff;
+  }
+
+  .split{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .splith {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .split .subj{
+    flex:1;
+    border-radius: 0;
+  }
+
+  .split .subj:first-child{
+    border-bottom: 1px dashed var(--line);
+  }
+
+  /* row accent stripes by weekday, subtle */
+  tbody tr:nth-child(odd) td:not(.empty){
+    background: #fcfcfa;
+  }
+
+  .accent-dot{
+    display:inline-block;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background: var(--mustard);
+    margin-right:6px;
+    vertical-align:middle;
+  }
+
+  footer{
+    text-align:center;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 22px;
+  }
+
+  @media (max-width: 720px){
+    thead th{ font-size:0.8rem; padding:10px 3px; }
+    thead th:first-child{ padding-left:10px; width:56px; }
+    tbody th{ padding:10px 4px 10px 10px; font-size:0.95rem; }
+    .subj{ font-size:0.82rem; padding:6px 3px; }
+    .masthead{ align-items:flex-start; }
+    .teacher{ text-align:left; max-width:none; }
+  }

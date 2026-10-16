@@ -13,6 +13,10 @@
 
   *{ box-sizing:border-box; }
 
+  .mobile {
+    display: none;
+  }
+
   html,body{
     margin:0;
     padding:0;
@@ -237,7 +241,11 @@
     thead {
       display: none;
     }
+    .mobile {
+      display: block;
+    }
   }
+  
 
   .btn {
     background: #35543f;
@@ -344,7 +352,7 @@ li .subj {
   background: #233a2a;
   border-radius: 10px;
   margin: 2px;
-  width: 100px;
+  width: 200px;
   padding: 10px;
   color: #fff;
 }

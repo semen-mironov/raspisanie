@@ -231,6 +231,12 @@
     .empty {
       display: none;
     }
+    tbody {
+      display: none;
+    }
+    thead {
+      display: none;
+    }
   }
 
   .btn {
@@ -326,3 +332,23 @@
   html[data-theme="dark"] hr {
     color: #fff;
   }
+.day {
+  background: #355240;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+li .subj {
+  background: #233a2a;
+  border-radius: 10px;
+  margin: 2px;
+  width: 100px;
+  padding: 10px;
+  color: #fff;
+}
+
+.day ul { display: none; }
+.day.open ul { display: block; }
+.day h3 { cursor: pointer; }
